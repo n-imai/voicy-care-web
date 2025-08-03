@@ -134,52 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('dark-mode');
     }
     
-    // 音量警告のシミュレーション
-    function showVolumeWarning() {
-        const warning = document.createElement('div');
-        warning.className = 'volume-warning';
-        warning.innerHTML = `
-            <div class="warning-content">
-                <h3>⚠️ 音量注意</h3>
-                <p>音量が高く設定されています。聴覚保護のため、適切な音量でご利用ください。</p>
-                <button onclick="this.parentElement.parentElement.remove()">了解</button>
-            </div>
-        `;
-        warning.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-        `;
-        warning.querySelector('.warning-content').style.cssText = `
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            max-width: 400px;
-            margin: 0 20px;
-        `;
-        warning.querySelector('button').style.cssText = `
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-top: 1rem;
-        `;
-        
-        document.body.appendChild(warning);
-    }
-    
-    // デモ用: 5秒後に音量警告を表示
-    setTimeout(showVolumeWarning, 5000);
+
 });
 
 // ユーティリティ関数
