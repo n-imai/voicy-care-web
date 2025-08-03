@@ -90,28 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // 通知フォームの処理
-    const notificationForm = document.querySelector('.notification-form');
-    if (notificationForm) {
-        notificationForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = this.querySelector('input[name="email"]').value;
-            const submitBtn = this.querySelector('button[type="submit"]');
-            
-            // 送信中の表示
-            submitBtn.textContent = '送信中...';
-            submitBtn.disabled = true;
-            
-            // 模擬的な送信処理（実際にはサーバーサイドの実装が必要）
-            setTimeout(() => {
-                alert('ありがとうございます！リリース情報をお送りいたします。');
-                this.reset();
-                submitBtn.textContent = '通知を受け取る';
-                submitBtn.disabled = false;
-            }, 1500);
-        });
-    }
+
     
     // パフォーマンス最適化: 画像の遅延読み込み
     const images = document.querySelectorAll('img[data-src]');

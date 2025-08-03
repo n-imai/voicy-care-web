@@ -697,6 +697,23 @@ body {
     border-color: var(--primary-color);
 }
 
+.form-note {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tally-form-container {
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+}
+
+.tally-form-container iframe {
+    border-radius: 10px;
+}
+
 /* フッター */
 .footer {
     background: var(--text-dark);

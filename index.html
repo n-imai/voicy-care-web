@@ -310,26 +310,33 @@
                         <strong>honeymarron</strong> - プロジェクトオーナー
                     </p>
                     <p class="contact-description">
-                        質問やバグ報告、ご要望がございましたら、お問い合わせフォームをご利用ください。<br>
+                        質問やバグ報告、ご要望がございましたら、下記のフォームをご利用ください。<br>
                         皆様のフィードバックをお待ちしております。
                     </p>
-                    <div class="contact-links">
-                        <a href="https://tally.so/r/m6BDko" class="contact-link" target="_blank">
-                            <span class="contact-link-icon">📝</span>
-                            お問い合わせフォーム
-                        </a>
-                    </div>
 
                 </div>
                 <div class="contact-form">
-                    <h3 class="contact-subtitle">リリース通知を受け取る</h3>
-                    <form class="notification-form">
-                        <div class="form-group">
-                            <label for="email">メールアドレス</label>
-                            <input type="email" id="email" name="email" placeholder="your-email@example.com" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">通知を受け取る</button>
-                    </form>
+                    <h3 class="contact-subtitle">お問い合わせフォーム</h3>
+                    <p class="form-note">
+                        ご質問、ご要望、不具合報告など、お気軽にお問い合わせください。
+                    </p>
+                    
+                    <!-- Tallyフォーム埋め込み -->
+                    <div class="tally-form-container">
+                        <iframe 
+                            data-tally-src="https://tally.so/embed/m6BDko?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                            loading="lazy" 
+                            width="100%" 
+                            height="500" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0" 
+                            title="VoicyCareお問い合わせフォーム">
+                        </iframe>
+                        <script>
+                            var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.head.appendChild(s);}
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
