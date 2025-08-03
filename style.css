@@ -520,70 +520,7 @@ body {
     border-left: 3px solid var(--primary-color);
 }
 
-/* 開発状況セクション */
-.development-status {
-    padding: 100px 0;
-    background: var(--background-white);
-}
 
-.status-timeline {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.status-item {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    border-radius: 15px;
-    position: relative;
-}
-
-.status-item.completed {
-    background: linear-gradient(135deg, rgba(126, 211, 33, 0.1) 0%, rgba(107, 185, 26, 0.1) 100%);
-    border-left: 4px solid var(--secondary-color);
-}
-
-.status-item.in-progress {
-    background: linear-gradient(135deg, rgba(245, 166, 35, 0.1) 0%, rgba(230, 145, 15, 0.1) 100%);
-    border-left: 4px solid var(--accent-color);
-}
-
-.status-item.planned {
-    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(53, 122, 189, 0.1) 100%);
-    border-left: 4px solid var(--primary-color);
-}
-
-.status-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-}
-
-.status-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-}
-
-.status-list {
-    list-style: none;
-}
-
-.status-list li {
-    color: var(--text-light);
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-    position: relative;
-}
-
-.status-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-}
 
 /* ダウンロードセクション */
 .download {

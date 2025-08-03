@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // アニメーション対象要素を監視
-    const animateElements = document.querySelectorAll('.feature-card, .benefit-card, .tech-card, .status-item');
+    const animateElements = document.querySelectorAll('.feature-card, .benefit-card, .tech-card');
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
