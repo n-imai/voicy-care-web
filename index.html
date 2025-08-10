@@ -53,10 +53,10 @@
                         <div class="hero-feature-icon">👴</div>
                         <div class="hero-feature-text">高齢者対応UI</div>
                     </div>
-                    <div class="hero-feature">
-                        <div class="hero-feature-icon">☁️</div>
-                        <div class="hero-feature-text">クラウド対応</div>
-                    </div>
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">☁️</div>
+                            <div class="hero-feature-text">クラウド連携</div>
+                        </div>
                 </div>
                 <div class="hero-cta">
                     <a href="#download" class="btn btn-primary">無料ダウンロード</a>
@@ -71,9 +71,9 @@
                                 <div class="app-title">🎵 VoicyCare</div>
                                 <div class="volume-indicator">
                                     <div class="volume-bar">
-                                        <div class="volume-fill" style="width: 75%"></div>
+                                        <div class="volume-fill" style="width: 100%"></div>
                                     </div>
-                                    <span class="volume-text">150%</span>
+                                    <span class="volume-text">200%</span>
                                 </div>
                             </div>
                             <div class="app-player">
@@ -132,14 +132,14 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">🎵</div>
-                    <h3 class="feature-title">3つの音質プリセット</h3>
+                    <h3 class="feature-title">音量・音質プリセット</h3>
                     <p class="feature-description">
-                        聴覚特性に合わせた「はっきり」「やわらかく」「静かに」の3つのプリセットで、最適な音質を簡単選択。
+                        5段階の音量プリセットと、シンプル/詳細を切り替えできる音質設定で、最適な聴こえを簡単に。
                     </p>
                     <ul class="feature-list">
-                        <li>「はっきり」- 人声・音声を明瞭に</li>
-                        <li>「やわらかく」- 耳に優しい柔らかい音質</li>
-                        <li>「静かに」- 騒音環境での聞き取り重視</li>
+                        <li>5段階の音量プリセット</li>
+                        <li>シンプル/詳細の音質設定（択一方式）</li>
+                        <li>イコライザープリセット（高音/低音/ボーカル/フラット）</li>
                     </ul>
                 </div>
 
@@ -150,7 +150,7 @@
                         Dropbox完全対応により大容量ファイル（最大4GB）のストリーミング再生を実現。将来的に他のクラウドサービスにも対応予定。
                     </p>
                     <ul class="feature-list">
-                        <li>Dropbox完全統合（自動リフレッシュ対応）</li>
+                        <li>Dropbox完全統合（自動トークンリフレッシュ対応）</li>
                         <li>大容量ファイル（最大4GB）対応</li>
                         <li>バックグラウンドキャッシュ機能</li>
                     </ul>
@@ -166,6 +166,19 @@
                         <li>ABリピート機能（回数指定可能）</li>
                         <li>プレイリスト作成・管理</li>
                         <li>5バンドイコライザー</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📢</div>
+                    <h3 class="feature-title">広告と同意管理</h3>
+                    <p class="feature-description">
+                        音楽体験を最優先に、非侵襲的な広告運用と同意管理に対応。
+                    </p>
+                    <ul class="feature-list">
+                        <li>バナー広告（非再生画面のみ）</li>
+                        <li>インタースティシャル（Dropbox入口で1日1回/セッション1回）</li>
+                        <li>UMPによる同意管理（PA/NPA自動切替）</li>
                     </ul>
                 </div>
 
@@ -233,11 +246,12 @@
                 <div class="tech-card">
                     <h3 class="tech-title">🛠️ 技術スタック</h3>
                     <ul class="tech-list">
-                        <li><strong>Framework:</strong> Flutter 3.0+</li>
-                        <li><strong>Language:</strong> Dart</li>
-                        <li><strong>Audio:</strong> just_audio + audioplayers</li>
+                        <li><strong>Framework:</strong> Flutter 3.16+</li>
+                        <li><strong>Language:</strong> Dart 3.2+</li>
+                        <li><strong>Audio:</strong> just_audio + just_audio_background + audioplayers</li>
                         <li><strong>Architecture:</strong> Clean Architecture</li>
                         <li><strong>State Management:</strong> BLoC Pattern</li>
+                        <li><strong>Ads/Consent:</strong> Google Mobile Ads SDK + UMP</li>
                     </ul>
                 </div>
 
@@ -295,7 +309,7 @@
                     </a>
                 </div>
                 <div class="download-note">
-                    <p><strong>注意:</strong> VoicyCareは医療機器ではありません。聴覚に関する医学的な問題については、専門医にご相談ください。</p>
+                    <p><strong>注意:</strong> VoicyCareは聴覚支援を目的とした音楽プレイヤーですが、医療機器ではありません。聴覚に関する医学的な問題については、必ず専門医にご相談ください。</p>
                 </div>
             </div>
         </div>
@@ -358,7 +372,7 @@
                         <ul>
                             <li><a href="#features">音量増幅</a></li>
                             <li><a href="#features">高齢者対応UI</a></li>
-                            <li><a href="#features">クラウド対応</a></li>
+                            <li><a href="#features">クラウド連携</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
