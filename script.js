@@ -90,6 +90,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // GA4: ストアボタンクリック計測（URL確定後もそのまま動作）
+    function trackClick(eventName, url) {
+        try {
+            if (typeof gtag === 'function') {
+                gtag('event', eventName, {
+                    link_url: url || '',
+                    event_source: 'lp_button'
+                });
+            }
+        } catch (_) {}
+    }
+    const iosBtn = document.querySelector('.ios-btn');
+    if (iosBtn) {
+        iosBtn.addEventListener('click', () => trackClick('app_store_click', iosBtn.getAttribute('href')));
+    }
+    const androidBtn = document.querySelector('.android-btn');
+    if (androidBtn) {
+        androidBtn.addEventListener('click', () => trackClick('google_play_click', androidBtn.getAttribute('href')));
+    }
+
+    // GA4: Tally フォーム送信検知（iframe postMessage 受信）
+    function isTallySubmitEvent(message) {
+        try {
+            if (!message) return false;
+            // 文字列/オブジェクトどちらでも検知できるように包括的に評価
+            const text = (typeof message === 'string') ? message : JSON.stringify(message);
+            const lower = text.toLowerCase();
+            return (lower.includes('tally') || lower.includes('form')) && (lower.includes('submit'));
+        } catch (_) { return false; }
+    }
+    window.addEventListener('message', (evt) => {
+        // 送信元の確認（tally.so 域からのメッセージのみ）
+        if (!evt.origin || !evt.origin.includes('tally.so')) return;
+        if (!isTallySubmitEvent(evt.data)) return;
+        try {
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    method: 'tally',
+                    event_source: 'contact_iframe'
+                });
+            }
+        } catch (_) {}
+    });
+
 
     
     // パフォーマンス最適化: 画像の遅延読み込み
