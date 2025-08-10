@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-# Update this to your actual sitemap URL after deployment
-Sitemap: https://example.com/sitemap.xml
+# Sitemap
+Sitemap: https://voicy-care.honeymarron.com/sitemap.xml
 
