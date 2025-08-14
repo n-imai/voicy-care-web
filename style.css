@@ -82,8 +82,8 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    width: 48px;              /* 大きめのタップ領域 */
-    height: 48px;             /* 大きめのタップ領域 */
+    width: 56px;              /* さらに大きく */
+    height: 56px;             /* さらに大きく */
     justify-content: center;
     align-items: center;
     gap: 6px;
@@ -92,7 +92,7 @@ body {
 }
 
 .nav-toggle span {
-    width: 28px;
+    width: 30px;
     height: 3px;
     background: var(--text-dark);
     margin: 0;
@@ -846,6 +846,7 @@ body {
     
     .nav-toggle {
         display: flex;
+        margin-right: 8px; /* 端の欠け対策で内側に寄せる */
     }
 
     /* モバイル: ハンバーガーメニュー展開 */
@@ -864,7 +865,11 @@ body {
         z-index: 1001;
     }
     .nav-menu.active li { border-top: 1px solid var(--border-light); }
-    .nav-menu.active a { padding: 12px 20px; }
+    .nav-menu.active a {
+        display: block;
+        padding: 16px 24px; /* タップ領域拡大 */
+        font-size: 1.1rem;
+    }
     .nav-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
