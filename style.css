@@ -851,7 +851,7 @@ body {
     
     .nav-toggle {
         display: flex;
-        margin-right: 8px; /* 端の欠け対策で内側に寄せる */
+        margin-right: calc(16px + env(safe-area-inset-right)); /* 端の欠け対策をさらに強化 */
     }
 
     /* モバイル: ハンバーガーメニュー展開 */
@@ -881,6 +881,9 @@ body {
     .nav-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* スマホSafariでのセーフエリア余白を強化 */
+    .header { padding-right: env(safe-area-inset-right); }
     
     .hero-container {
         grid-template-columns: 1fr;
