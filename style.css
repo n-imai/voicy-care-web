@@ -82,13 +82,20 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    width: 48px;              /* 大きめのタップ領域 */
+    height: 48px;             /* 大きめのタップ領域 */
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .nav-toggle span {
-    width: 25px;
+    width: 28px;
     height: 3px;
     background: var(--text-dark);
-    margin: 3px 0;
+    margin: 0;
     transition: 0.3s;
 }
 
