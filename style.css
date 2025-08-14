@@ -840,6 +840,27 @@ body {
     .nav-toggle {
         display: flex;
     }
+
+    /* モバイル: ハンバーガーメニュー展開 */
+    .nav-container { position: relative; }
+    .nav-menu.active {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--background-white);
+        border-bottom: 1px solid var(--border-light);
+        box-shadow: var(--shadow-light);
+        z-index: 1001;
+    }
+    .nav-menu.active li { border-top: 1px solid var(--border-light); }
+    .nav-menu.active a { padding: 12px 20px; }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
     
     .hero-container {
         grid-template-columns: 1fr;
