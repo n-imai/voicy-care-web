@@ -48,7 +48,12 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; /* fallback */
+    padding-left: 20px; /* fallback */
+    padding-right: 20px; /* fallback */
+    /* iOS安全領域に配慮して右上の×が欠けないようにする */
+    padding-left: calc(20px + env(safe-area-inset-left));
+    padding-right: calc(20px + env(safe-area-inset-right));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -850,7 +855,10 @@ body {
     }
 
     /* モバイル: ハンバーガーメニュー展開 */
-    .nav-container { position: relative; }
+    .nav-container {
+        position: relative;
+        padding-right: calc(20px + env(safe-area-inset-right)); /* 右上×の欠け防止 */
+    }
     .nav-menu.active {
         display: flex;
         position: absolute;
