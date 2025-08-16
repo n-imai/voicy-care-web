@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/privacy", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/terms", "destination": "/terms-of-service", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true }
+  ]
+}
+
+
