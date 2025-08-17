@@ -9,6 +9,9 @@
     { "source": "/en/privacy-policy.html", "destination": "/en/privacy-policy", "permanent": true },
     { "source": "/en/terms-of-service.html", "destination": "/en/terms-of-service", "permanent": true },
     { "source": "/en/contact.html", "destination": "/en/contact", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/api/lang-redirect" }
   ]
 }
 
