@@ -205,10 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 location.replace(toEnPath(path));
                 return;
             }
-            if (saved === 'ja' && isEnPath) {
-                location.replace(toJaPath(path));
-                return;
-            }
+            // saved が 'ja' の場合でも、ユーザーが明示的に /en/ を開いたときは尊重する
 
             // 初回のみ: ブラウザ優先言語でトップを振り分け
             if (!saved && (location.pathname === '/' || location.pathname === '/index.html')) {
