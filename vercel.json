@@ -3,7 +3,15 @@
   "redirects": [
     { "source": "/privacy", "destination": "/privacy-policy", "permanent": true },
     { "source": "/terms", "destination": "/terms-of-service", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact", "permanent": true }
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/terms-of-service.html", "destination": "/terms-of-service", "permanent": true },
+    { "source": "/en/privacy-policy.html", "destination": "/en/privacy-policy", "permanent": true },
+    { "source": "/en/terms-of-service.html", "destination": "/en/terms-of-service", "permanent": true },
+    { "source": "/en/contact.html", "destination": "/en/contact", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/api/lang-redirect" }
   ]
 }
 

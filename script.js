@@ -156,7 +156,76 @@ document.addEventListener('DOMContentLoaded', function() {
     if (prefersDarkScheme.matches) {
         document.body.classList.add('dark-mode');
     }
-    
+
+    // 多言語対応: 初回のみブラウザ言語で自動遷移 + 明示指定の優先（同一ページ間でのマッピング対応）
+    (function handleLanguageRouting() {
+        try {
+            const storageKey = 'preferredLang';
+            const saved = localStorage.getItem(storageKey);
+            const params = new URLSearchParams(window.location.search);
+            const paramLang = params.get('lang'); // 'ja' | 'en'
+            const path = location.pathname;
+            const isRootJa = path === '/' || path === '/index.html' || path === '/contact' || path === '/contact.html' || path === '/privacy-policy' || path === '/privacy-policy.html' || path === '/terms-of-service' || path === '/terms-of-service.html' || (path.endsWith('.html') && !path.startsWith('/en/'));
+            const isEnPath = location.pathname === '/en' || location.pathname === '/en/' || location.pathname.startsWith('/en/');
+
+            function toEnPath(p) {
+                if (p === '/' || p === '/index.html') return '/en/';
+                if (p === '/contact' || p === '/contact.html') return '/en/contact.html';
+                if (p === '/privacy-policy' || p === '/privacy-policy.html') return '/en/privacy-policy.html';
+                if (p === '/terms-of-service' || p === '/terms-of-service.html') return '/en/terms-of-service.html';
+                if (p.startsWith('/en/')) return p; // already en
+                return '/en/';
+            }
+            function toJaPath(p) {
+                if (p === '/en' || p === '/en/' || p === '/en/index.html') return '/';
+                if (p === '/en/contact' || p === '/en/contact.html') return '/contact.html';
+                if (p === '/en/privacy-policy' || p === '/en/privacy-policy.html') return '/privacy-policy.html';
+                if (p === '/en/terms-of-service' || p === '/en/terms-of-service.html') return '/terms-of-service.html';
+                return '/';
+            }
+
+            // 明示指定があれば保存して反映
+            if (paramLang === 'en') {
+                localStorage.setItem(storageKey, 'en');
+                if (!isEnPath) {
+                    location.replace(toEnPath(path));
+                }
+                return;
+            }
+            if (paramLang === 'ja') {
+                localStorage.setItem(storageKey, 'ja');
+                if (isEnPath) {
+                    location.replace(toJaPath(path));
+                }
+                return;
+            }
+
+            // 既に選好があればそれを尊重（トップ/主要ページのみ遷移）
+            if (saved === 'en' && !isEnPath && isRootJa) {
+                location.replace(toEnPath(path));
+                return;
+            }
+            if (saved === 'ja' && isEnPath) {
+                location.replace(toJaPath(path));
+                return;
+            }
+
+            // 初回のみ: ブラウザ優先言語でトップを振り分け
+            if (!saved && (location.pathname === '/' || location.pathname === '/index.html')) {
+                const langs = navigator.languages || [navigator.language || ''];
+                const primary = (langs[0] || '').toLowerCase();
+                if (primary.startsWith('en')) {
+                    localStorage.setItem(storageKey, 'en');
+                    location.replace('/en/');
+                } else {
+                    localStorage.setItem(storageKey, 'ja');
+                }
+            }
+        } catch (_) {
+            // 失敗時は何もしない
+        }
+    })();
+
 
 });
 
