@@ -77,7 +77,7 @@
             <div class="page-header">
                 <h1>Privacy Policy</h1>
                 <p class="page-description">How VoicyCare handles personal data.</p>
-                <p class="last-updated">Last updated: 2025-08-05</p>
+                <p class="last-updated">Last updated: 2025-08-20</p>
             </div>
 
             <div class="policy-content">
@@ -150,7 +150,31 @@
                             <h4>Dropbox API</h4>
                             <p>Used for cloud integration; Dropbox's policy applies.</p>
                         </div>
+                        <div class="service-item">
+                            <h4>Firebase Analytics</h4>
+                            <p>Collects anonymized usage data to improve quality. Default OFF in EEA/UK and ON elsewhere. Users can change this anytime in Settings.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Firebase Crashlytics</h4>
+                            <p>Collects anonymous crash reports (stack traces, OS version) to improve stability. No personally identifying information is included.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Google Mobile Ads (AdMob)</h4>
+                            <p>Serves App Open Ads, banners, and interstitials. In EEA/UK we use Google UMP to obtain consent and show non-personalized ads (NPA) if consent is not given. On iOS we request ATT if required.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Firebase Remote Config</h4>
+                            <p>Delivers policy values like ad cooldowns or accessibility suppressions remotely. It does not store personal data; only numeric/boolean config values.</p>
+                        </div>
                     </div>
+                    <h3>5.2 Consent and Defaults for Ads/Analytics</h3>
+                    <ul class="policy-list">
+                        <li><strong>Analytics default:</strong> OFF in EEA/UK, ON elsewhere. Applied only on first run; afterwards we always respect the user’s in-app preference (Settings → “Anonymous usage stats”).</li>
+                        <li><strong>Ad consent:</strong> In EEA/UK, consent is managed via UMP. Without consent we show only NPA ads. Outside EEA we typically use NPA unless the user consents to PA.</li>
+                        <li><strong>Accessibility:</strong> We may suppress ads during playback or when VoiceOver is active.</li>
+                        <li><strong>Frequency caps:</strong> App Open/interstitial ads have cooldowns and session caps to avoid excessive display (tunable via Remote Config).</li>
+                        <li><strong>User choice:</strong> Users can change consent and analytics settings anytime in the app.</li>
+                    </ul>
                 </section>
 
                 <section class="policy-section">
