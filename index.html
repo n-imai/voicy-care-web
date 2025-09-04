@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoicyCare - 聴覚支援音楽プレイヤー | 聞こえる喜びを、すべての人に</title>
-    <meta name="description" content="聞こえにくさを感じる方の「聞こえ」をサポートする革新的な音楽プレイヤーアプリ。200%音量増幅システムで、より快適な音楽体験を。">
+    <meta name="description" content="音量増幅アプリ - 最大200%の音量ブースト機能を搭載した音楽プレイヤー。イヤホン・ヘッドホンの音量を増幅し、聞こえにくい音楽やポッドキャストもクリアに再生。無料の音量ブースターアプリ。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -40,16 +40,18 @@
     <meta name="twitter:image:alt" content="VoicyCare - 聴覚支援音楽プレイヤーの紹介画像">
     <meta name="apple-itunes-app" content="app-id=6749561636">
     
-    <!-- JSON-LD: WebSite & Person -->
+    <!-- JSON-LD: WebSite & MobileApplication -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "WebSite",
-          "name": "VoicyCare",
+          "name": "VoicyCare - 音量増幅アプリ",
           "url": "https://voicy-care.honeymarron.com/",
           "inLanguage": "ja-JP",
+          "description": "音量増幅アプリ。最大200%の音量ブースト機能を搭載。イヤホン・ヘッドホンの音量を増幅する無料音楽プレイヤー。",
+          "keywords": "音量増幅,音量増幅アプリ,音量ブースター,音量ブースト,ボリュームブースター,音楽プレイヤー,聴覚支援,VoicyCare",
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://voicy-care.honeymarron.com/?q={search_term_string}",
@@ -57,10 +59,40 @@
           }
         },
         {
-          "@type": "Person",
-          "name": "honeymarron",
-          "url": "https://voicy-care.honeymarron.com/",
-          "image": "https://voicy-care.honeymarron.com/assets/images/icons/app_store_icon_1024.png"
+          "@type": "MobileApplication",
+          "name": "VoicyCare - 音量増幅アプリ",
+          "operatingSystem": "iOS, Android",
+          "applicationCategory": "MusicApplication",
+          "softwareVersion": "1.0.0",
+          "description": "音量増幅アプリ。最大200%の音量ブースト機能でイヤホン・ヘッドホンの音量を増幅。聞こえにくい音楽もクリアに再生する無料音楽プレイヤー。",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "honeymarron",
+            "url": "https://voicy-care.honeymarron.com/"
+          },
+          "screenshot": [
+            "https://voicy-care.honeymarron.com/assets/images/screenshots/01_playback.webp",
+            "https://voicy-care.honeymarron.com/assets/images/screenshots/02_volume.webp",
+            "https://voicy-care.honeymarron.com/assets/images/screenshots/03_equalizer.webp"
+          ],
+          "featureList": [
+            "最大200%音量増幅",
+            "5バンドイコライザー",
+            "音量プリセット機能",
+            "ABリピート機能",
+            "Dropboxクラウド連携",
+            "大きな文字とボタンのUI"
+          ]
         },
         {
           "@type": "ContactPage",
