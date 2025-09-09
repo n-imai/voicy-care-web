@@ -165,7 +165,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const params = new URLSearchParams(window.location.search);
             const paramLang = params.get('lang'); // 'ja' | 'en'
             const path = location.pathname;
-            const isRootJa = path === '/' || path === '/index.html' || path === '/contact' || path === '/contact.html' || path === '/privacy-policy' || path === '/privacy-policy.html' || path === '/terms-of-service' || path === '/terms-of-service.html' || (path.endsWith('.html') && !path.startsWith('/en/'));
+            // 日本語→英語への自動遷移はトップページのみに限定（明示的に日本語ページを開いた場合は尊重）
+            const isRootJa = path === '/' || path === '/index.html';
             const isEnPath = location.pathname === '/en' || location.pathname === '/en/' || location.pathname.startsWith('/en/');
 
             function toEnPath(p) {
@@ -200,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // 既に選好があればそれを尊重（トップ/主要ページのみ遷移）
+            // 既に選好があっても、トップ以外では自動遷移しない（ユーザーの明示を優先）
             if (saved === 'en' && !isEnPath && isRootJa) {
                 location.replace(toEnPath(path));
                 return;
