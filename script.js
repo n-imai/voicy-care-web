@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('dark-mode');
     }
 
-    // 多言語対応: 初回のみブラウザ言語で自動遷移 + 明示指定の優先（同一ページ間でのマッピング対応）
+    // 多言語対応: 明示指定 (?lang=) のみ反映
     (function handleLanguageRouting() {
         try {
             const storageKey = 'preferredLang';
@@ -165,53 +165,28 @@ document.addEventListener('DOMContentLoaded', function() {
             const params = new URLSearchParams(window.location.search);
             const paramLang = params.get('lang'); // 'ja' | 'en'
             const path = location.pathname;
-            // 日本語→英語への自動遷移はトップページのみに限定（明示的に日本語ページを開いた場合は尊重）
-            const isRootJa = path === '/' || path === '/index.html';
             const isEnPath = location.pathname === '/en' || location.pathname === '/en/' || location.pathname.startsWith('/en/');
-
-            function toEnPath(p) {
-                if (p === '/' || p === '/index.html') return '/en/';
-                if (p === '/contact' || p === '/contact.html') return '/en/contact';
-                if (p === '/privacy-policy' || p === '/privacy-policy.html') return '/en/privacy-policy';
-                if (p === '/terms-of-service' || p === '/terms-of-service.html') return '/en/terms-of-service';
-                if (p.startsWith('/en/')) return p; // already en
-                return '/en/';
-            }
-            function toJaPath(p) {
-                if (p === '/en' || p === '/en/' || p === '/en/index.html') return '/';
-                if (p === '/en/contact' || p === '/en/contact.html') return '/contact';
-                if (p === '/en/privacy-policy' || p === '/en/privacy-policy.html') return '/privacy-policy';
-                if (p === '/en/terms-of-service' || p === '/en/terms-of-service.html') return '/terms-of-service';
-                return '/';
-            }
 
             // 明示指定があれば保存して反映
             if (paramLang === 'en') {
                 localStorage.setItem(storageKey, 'en');
-                if (!isEnPath) {
-                    location.replace(toEnPath(path));
-                }
+                if (!isEnPath) location.replace('/en/');
                 return;
             }
             if (paramLang === 'ja') {
                 localStorage.setItem(storageKey, 'ja');
-                if (isEnPath) {
-                    location.replace(toJaPath(path));
-                }
+                if (isEnPath) location.replace('/');
                 return;
             }
 
-            // 自動遷移しない（ユーザーの明示を常に優先）
-            // saved が 'ja' の場合でも、ユーザーが明示的に /en/ を開いたときは尊重する
-
-            // 初回のブラウザ言語による自動遷移もしない
+            // 自動遷移は一切行わない（ユーザーの明示を常に優先）
         } catch (_) {
             // 失敗時は何もしない
         }
     })();
 
     // 同意バナー（Consent Mode v2）
-    (function setupConsentBanner() {
+    function VC_createConsentBanner() {
         try {
             const storageKey = 'vc_cookie_consent_v1';
             const saved = localStorage.getItem(storageKey);
@@ -226,6 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="consent-banner__inner">
                     <div class="consent-banner__text">
                         ${isJa ? '当サイトでは、分析および広告のためにクッキー等を使用します。設定はいつでも変更できます。' : 'We use cookies for analytics and ads. You can change your preferences anytime.'}
+                        <a href="${isJa ? '/privacy-policy' : '/en/privacy-policy'}" class="consent-privacy-link" target="_blank" rel="noopener noreferrer">${isJa ? 'プライバシーポリシー' : 'Privacy Policy'}</a>
                     </div>
                     <div class="consent-banner__actions">
                         <button class="consent-btn consent-reject">${isJa ? '拒否' : 'Reject'}</button>
@@ -265,7 +241,18 @@ document.addEventListener('DOMContentLoaded', function() {
             banner.querySelector('.consent-accept').addEventListener('click', onAccept);
             banner.querySelector('.consent-reject').addEventListener('click', onReject);
         } catch (_) {}
-    })();
+    }
+
+    // 初期表示
+    VC_createConsentBanner();
+
+    // 再表示API
+    window.VC_openCookieSettings = function() {
+        try {
+            localStorage.removeItem('vc_cookie_consent_v1');
+        } catch (_) {}
+        VC_createConsentBanner();
+    };
 
 
 });
