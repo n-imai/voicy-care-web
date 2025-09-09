@@ -170,17 +170,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
             function toEnPath(p) {
                 if (p === '/' || p === '/index.html') return '/en/';
-                if (p === '/contact' || p === '/contact.html') return '/en/contact.html';
-                if (p === '/privacy-policy' || p === '/privacy-policy.html') return '/en/privacy-policy.html';
-                if (p === '/terms-of-service' || p === '/terms-of-service.html') return '/en/terms-of-service.html';
+                if (p === '/contact' || p === '/contact.html') return '/en/contact';
+                if (p === '/privacy-policy' || p === '/privacy-policy.html') return '/en/privacy-policy';
+                if (p === '/terms-of-service' || p === '/terms-of-service.html') return '/en/terms-of-service';
                 if (p.startsWith('/en/')) return p; // already en
                 return '/en/';
             }
             function toJaPath(p) {
                 if (p === '/en' || p === '/en/' || p === '/en/index.html') return '/';
-                if (p === '/en/contact' || p === '/en/contact.html') return '/contact.html';
-                if (p === '/en/privacy-policy' || p === '/en/privacy-policy.html') return '/privacy-policy.html';
-                if (p === '/en/terms-of-service' || p === '/en/terms-of-service.html') return '/terms-of-service.html';
+                if (p === '/en/contact' || p === '/en/contact.html') return '/contact';
+                if (p === '/en/privacy-policy' || p === '/en/privacy-policy.html') return '/privacy-policy';
+                if (p === '/en/terms-of-service' || p === '/en/terms-of-service.html') return '/terms-of-service';
                 return '/';
             }
 
