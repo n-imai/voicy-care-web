@@ -223,6 +223,63 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })();
 
+    // 同意バナー（Consent Mode v2）
+    (function setupConsentBanner() {
+        try {
+            const storageKey = 'vc_cookie_consent_v1';
+            const saved = localStorage.getItem(storageKey);
+            if (saved) return; // 既に応答済み
+
+            const lang = (document.documentElement.getAttribute('lang') || 'ja').toLowerCase();
+            const isJa = lang.startsWith('ja');
+
+            const banner = document.createElement('div');
+            banner.className = 'consent-banner';
+            banner.innerHTML = `
+                <div class="consent-banner__inner">
+                    <div class="consent-banner__text">
+                        ${isJa ? '当サイトでは、分析および広告のためにクッキー等を使用します。設定はいつでも変更できます。' : 'We use cookies for analytics and ads. You can change your preferences anytime.'}
+                    </div>
+                    <div class="consent-banner__actions">
+                        <button class="consent-btn consent-reject">${isJa ? '拒否' : 'Reject'}</button>
+                        <button class="consent-btn consent-accept">${isJa ? '同意' : 'Accept'}</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(banner);
+
+            function hide() { banner.remove(); }
+
+            const onAccept = () => {
+                try { if (typeof gtag === 'function') {
+                    gtag('consent', 'update', {
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted',
+                        'ad_storage': 'granted',
+                        'analytics_storage': 'granted'
+                    });
+                }} catch(_) {}
+                localStorage.setItem(storageKey, 'accepted');
+                hide();
+            };
+            const onReject = () => {
+                try { if (typeof gtag === 'function') {
+                    gtag('consent', 'update', {
+                        'ad_user_data': 'denied',
+                        'ad_personalization': 'denied',
+                        'ad_storage': 'denied',
+                        'analytics_storage': 'denied'
+                    });
+                }} catch(_) {}
+                localStorage.setItem(storageKey, 'rejected');
+                hide();
+            };
+
+            banner.querySelector('.consent-accept').addEventListener('click', onAccept);
+            banner.querySelector('.consent-reject').addEventListener('click', onReject);
+        } catch (_) {}
+    })();
+
 
 });
 

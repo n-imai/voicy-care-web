@@ -70,11 +70,6 @@
             "price": "0",
             "priceCurrency": "JPY"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "150"
-          },
           "author": {
             "@type": "Person",
             "name": "honeymarron",
@@ -102,6 +97,19 @@
         }
       ]
     }
+    </script>
+    <!-- Consent Mode v2 default (denied) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('consent', 'default', {
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted'
+      });
     </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FDNGSHFFN"></script>
@@ -426,24 +434,17 @@
                         Android版は近日公開予定です。
                     </p>
                 </div>
-                <div class="download-buttons">
-                    <a href="https://apps.apple.com/jp/app/id6749561636" class="download-btn ios-btn">
-                        <div class="download-btn-icon">📱</div>
-                        <div class="download-btn-text">
-                            <span class="download-btn-small">今すぐ</span>
-                            <span class="download-btn-large">App Store</span>
-                        </div>
+                <div class="download-buttons store-badges">
+                    <a href="https://apps.apple.com/jp/app/id6749561636" class="ios-btn" aria-label="Download on the App Store">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="Download on the App Store" height="83">
                     </a>
-                    <a href="#" class="download-btn android-btn">
-                        <div class="download-btn-icon">🤖</div>
-                        <div class="download-btn-text">
-                            <span class="download-btn-small">近日</span>
-                            <span class="download-btn-large">Google Play</span>
-                        </div>
+                    <a href="#" class="android-btn" aria-label="Get it on Google Play">
+                        <img src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう" height="83">
                     </a>
                 </div>
                 <div class="download-note">
-                    <p><strong>注意:</strong> VoicyCareは聴覚支援を目的とした音楽プレイヤーですが、医療機器ではありません。聴覚に関する医学的な問題については、必ず専門医にご相談ください。</p>
+                    <p><strong>注意:</strong> VoicyCareは聴覚支援を目的とした音楽プレイヤーですが、医療機器ではありません。聴覚に関する医学的な問題については、必ず専門医にご相談ください。<br>
+                    <strong>料金:</strong> 基本無料。広告は再生画面には表示されません。</p>
                 </div>
             </div>
         </div>
@@ -487,6 +488,66 @@
                             var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.head.appendChild(s);}
                         </script>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- アクセシビリティ -->
+    <section id="accessibility" class="features">
+        <div class="container">
+            <h2 class="section-title">アクセシビリティ</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🗣️</div>
+                    <h3 class="feature-title">支援技術への配慮</h3>
+                    <ul class="feature-list">
+                        <li>VoiceOver / TalkBackを考慮した操作設計</li>
+                        <li>ボタンの十分なタップ領域</li>
+                        <li>コントラストの高い配色</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔤</div>
+                    <h3 class="feature-title">可読性</h3>
+                    <ul class="feature-list">
+                        <li>大きめの文字サイズと行間</li>
+                        <li>アイコンと文字の組み合わせ</li>
+                        <li>わかりやすいラベル</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="benefits">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3 class="benefit-title">音量200%は安全ですか？</h3>
+                    <p class="benefit-description">適切な音量でご利用ください。長時間の大音量は聴覚に影響する可能性があります。</p>
+                </div>
+                <div class="benefit-card">
+                    <h3 class="benefit-title">Dropboxなしでも使えますか？</h3>
+                    <p class="benefit-description">端末内の音楽再生は可能です。クラウド再生にはDropbox連携が必要です。</p>
+                </div>
+                <div class="benefit-card">
+                    <h3 class="benefit-title">対応ファイル形式は？</h3>
+                    <p class="benefit-description">MP3/WAV/M4A/FLACなどに対応しています。</p>
+                </div>
+                <div class="benefit-card">
+                    <h3 class="benefit-title">広告はどこに表示されますか？</h3>
+                    <p class="benefit-description">再生画面以外に限定し、頻度は控えめに制御しています。</p>
+                </div>
+                <div class="benefit-card">
+                    <h3 class="benefit-title">データはどこに保存されますか？</h3>
+                    <p class="benefit-description">設定やトークンは端末内に保存。個人情報の外部保存は行いません。</p>
+                </div>
+                <div class="benefit-card">
+                    <h3 class="benefit-title">未成年でも使えますか？</h3>
+                    <p class="benefit-description">13歳未満の方は保護者の同意がある場合にご利用いただけます。</p>
                 </div>
             </div>
         </div>
