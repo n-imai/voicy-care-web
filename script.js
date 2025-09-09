@@ -201,24 +201,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // 既に選好があっても、トップ以外では自動遷移しない（ユーザーの明示を優先）
-            if (saved === 'en' && !isEnPath && isRootJa) {
-                location.replace(toEnPath(path));
-                return;
-            }
+            // 自動遷移しない（ユーザーの明示を常に優先）
             // saved が 'ja' の場合でも、ユーザーが明示的に /en/ を開いたときは尊重する
 
-            // 初回のみ: ブラウザ優先言語でトップを振り分け
-            if (!saved && (location.pathname === '/' || location.pathname === '/index.html')) {
-                const langs = navigator.languages || [navigator.language || ''];
-                const primary = (langs[0] || '').toLowerCase();
-                if (primary.startsWith('en')) {
-                    localStorage.setItem(storageKey, 'en');
-                    location.replace('/en/');
-                } else {
-                    localStorage.setItem(storageKey, 'ja');
-                }
-            }
+            // 初回のブラウザ言語による自動遷移もしない
         } catch (_) {
             // 失敗時は何もしない
         }
