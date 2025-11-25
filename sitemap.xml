@@ -72,5 +72,17 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://voicy-care.honeymarron.com/en/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voicy-care.honeymarron.com/contact"/>
   </url>
+  <url>
+    <loc>https://voicy-care.honeymarron.com/articles/</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://voicy-care.honeymarron.com/articles/smartphone-volume-low.html</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 

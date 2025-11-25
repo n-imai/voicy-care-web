@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoicyCare - 聴覚支援音楽プレイヤー | 聞こえる喜びを、すべての人に</title>
-    <meta name="description" content="音量増幅アプリ - 最大200%の音量ブースト機能を搭載した音楽プレイヤー。イヤホン・ヘッドホンの音量を増幅し、聞こえにくい音楽やポッドキャストもクリアに再生。無料の音量ブースターアプリ。">
+    <meta name="description"
+        content="音量増幅アプリ - 最大200%の音量ブースト機能を搭載した音楽プレイヤー。イヤホン・ヘッドホンの音量を増幅し、聞こえにくい音楽やポッドキャストもクリアに再生。無料の音量ブースターアプリ。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -39,7 +41,7 @@
     <meta name="twitter:image" content="https://voicy-care.honeymarron.com/assets/images/og/voicycare-og.png">
     <meta name="twitter:image:alt" content="VoicyCare - 聴覚支援音楽プレイヤーの紹介画像">
     <meta name="apple-itunes-app" content="app-id=6749561636">
-    
+
     <!-- JSON-LD: WebSite & MobileApplication -->
     <script type="application/ld+json">
     {
@@ -94,32 +96,86 @@
           "url": "https://voicy-care.honeymarron.com/contact",
           "inLanguage": "ja-JP",
           "name": "お問い合わせ - VoicyCare"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "音量200%は安全ですか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "適切な音量でご利用ください。長時間の大音量は聴覚に影響する可能性があります。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dropboxなしでも使えますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "端末内の音楽再生は可能です。クラウド再生にはDropbox連携が必要です。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "対応ファイル形式は？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MP3/WAV/M4A/FLACなどに対応しています。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "広告はどこに表示されますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "再生画面以外に限定し、頻度は控えめに制御しています。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "データはどこに保存されますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "設定やトークンは端末内に保存。個人情報の外部保存は行いません。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "未成年でも使えますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "13歳未満の方は保護者の同意がある場合にご利用いただけます。"
+              }
+            }
+          ]
         }
       ]
     }
     </script>
     <!-- Consent Mode v2 default (denied) -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
-      gtag('consent', 'default', {
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied',
-        'functionality_storage': 'granted',
-        'security_storage': 'granted'
-      });
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'functionality_storage': 'granted',
+            'security_storage': 'granted'
+        });
     </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FDNGSHFFN"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
-      gtag('js', new Date());
-      gtag('config', 'G-6FDNGSHFFN');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-6FDNGSHFFN');
     </script>
 </head>
+
 <body>
     <!-- ヘッダー -->
     <header class="header">
@@ -161,14 +217,14 @@
                         <div class="hero-feature-icon">🔊</div>
                         <div class="hero-feature-text">音量200%増幅</div>
                     </div>
-                        <div class="hero-feature">
-                            <div class="hero-feature-icon">🎛️</div>
-                            <div class="hero-feature-text">見やすく操作しやすいUI</div>
-                        </div>
-                        <div class="hero-feature">
-                            <div class="hero-feature-icon">☁️</div>
-                            <div class="hero-feature-text">クラウド連携</div>
-                        </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">🎛️</div>
+                        <div class="hero-feature-text">見やすく操作しやすいUI</div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">☁️</div>
+                        <div class="hero-feature-text">クラウド連携</div>
+                    </div>
                 </div>
                 <div class="hero-cta">
                     <a href="#download" class="btn btn-primary">無料ダウンロード</a>
@@ -205,6 +261,25 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お知らせ -->
+    <section id="news" class="news" style="padding: 40px 0; background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 20px;">お知らせ</h2>
+            <div class="news-list" style="max-width: 800px; margin: 0 auto;">
+                <div class="news-item"
+                    style="background: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 10px; display: flex; align-items: center; gap: 15px;">
+                    <time datetime="2025-11-22"
+                        style="color: #666; font-size: 0.9rem; min-width: 100px;">2025.11.22</time>
+                    <div class="news-content">
+                        <span class="news-tag"
+                            style="background: #0db4c1; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 10px;">Release</span>
+                        iOS版をリリースしました
                     </div>
                 </div>
             </div>
@@ -317,23 +392,33 @@
             <h2 class="section-title">スクリーンショット</h2>
             <div class="screenshots-grid">
                 <figure class="screenshot-card">
-                    <img src="assets/images/screenshots/01_playback.webp" srcset="assets/images/screenshots/01_playback.webp 1x, assets/images/screenshots/01_playback.png 2x" width="1206" height="2622" loading="lazy" alt="再生画面">
+                    <img src="assets/images/screenshots/01_playback.webp"
+                        srcset="assets/images/screenshots/01_playback.webp 1x, assets/images/screenshots/01_playback.png 2x"
+                        width="1206" height="2622" loading="lazy" alt="再生画面">
                     <figcaption class="screenshot-caption">再生画面</figcaption>
                 </figure>
                 <figure class="screenshot-card">
-                    <img src="assets/images/screenshots/02_volume.webp" srcset="assets/images/screenshots/02_volume.webp 1x, assets/images/screenshots/02_volume.png 2x" width="1206" height="2622" loading="lazy" alt="音量調整">
+                    <img src="assets/images/screenshots/02_volume.webp"
+                        srcset="assets/images/screenshots/02_volume.webp 1x, assets/images/screenshots/02_volume.png 2x"
+                        width="1206" height="2622" loading="lazy" alt="音量調整">
                     <figcaption class="screenshot-caption">音量調整</figcaption>
                 </figure>
                 <figure class="screenshot-card">
-                    <img src="assets/images/screenshots/03_equalizer.webp" srcset="assets/images/screenshots/03_equalizer.webp 1x, assets/images/screenshots/03_equalizer.png 2x" width="1206" height="2622" loading="lazy" alt="5バンドイコライザー">
+                    <img src="assets/images/screenshots/03_equalizer.webp"
+                        srcset="assets/images/screenshots/03_equalizer.webp 1x, assets/images/screenshots/03_equalizer.png 2x"
+                        width="1206" height="2622" loading="lazy" alt="5バンドイコライザー">
                     <figcaption class="screenshot-caption">5バンドイコライザー</figcaption>
                 </figure>
                 <figure class="screenshot-card">
-                    <img src="assets/images/screenshots/04_playlist.webp" srcset="assets/images/screenshots/04_playlist.webp 1x, assets/images/screenshots/04_playlist.png 2x" width="1206" height="2622" loading="lazy" alt="プレイリスト">
+                    <img src="assets/images/screenshots/04_playlist.webp"
+                        srcset="assets/images/screenshots/04_playlist.webp 1x, assets/images/screenshots/04_playlist.png 2x"
+                        width="1206" height="2622" loading="lazy" alt="プレイリスト">
                     <figcaption class="screenshot-caption">プレイリスト</figcaption>
                 </figure>
                 <figure class="screenshot-card">
-                    <img src="assets/images/screenshots/05_ab_repeat.webp" srcset="assets/images/screenshots/05_ab_repeat.webp 1x, assets/images/screenshots/05_ab_repeat.png 2x" width="1206" height="2622" loading="lazy" alt="ABリピート">
+                    <img src="assets/images/screenshots/05_ab_repeat.webp"
+                        srcset="assets/images/screenshots/05_ab_repeat.webp 1x, assets/images/screenshots/05_ab_repeat.png 2x"
+                        width="1206" height="2622" loading="lazy" alt="ABリピート">
                     <figcaption class="screenshot-caption">ABリピート</figcaption>
                 </figure>
             </div>
@@ -435,16 +520,21 @@
                     </p>
                 </div>
                 <div class="download-buttons store-badges">
-                    <a href="https://apps.apple.com/jp/app/id6749561636" class="ios-btn" aria-label="Download on the App Store">
-                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="Download on the App Store" height="83">
+                    <a href="https://apps.apple.com/jp/app/id6749561636" class="ios-btn"
+                        aria-label="Download on the App Store">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83"
+                            alt="Download on the App Store" height="83">
                     </a>
                     <a href="#" class="android-btn" aria-label="Get it on Google Play">
-                        <img src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう" height="83">
+                        <img src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                            alt="Google Play で手に入れよう" height="83">
                     </a>
                 </div>
                 <div class="download-note">
-                    <p><strong>注意:</strong> VoicyCareは聴覚支援を目的とした音楽プレイヤーですが、医療機器ではありません。聴覚に関する医学的な問題については、必ず専門医にご相談ください。<br>
-                    <strong>料金:</strong> 基本無料。広告は再生画面には表示されません。</p>
+                    <p><strong>注意:</strong>
+                        VoicyCareは聴覚支援を目的とした音楽プレイヤーですが、医療機器ではありません。聴覚に関する医学的な問題については、必ず専門医にご相談ください。<br>
+                        <strong>料金:</strong> 基本無料。広告は再生画面には表示されません。
+                    </p>
                 </div>
             </div>
         </div>
@@ -471,21 +561,16 @@
                     <p class="form-note">
                         ご質問、ご要望、不具合報告など、お気軽にお問い合わせください。
                     </p>
-                    
+
                     <!-- Tallyフォーム埋め込み -->
                     <div class="tally-form-container">
-                        <iframe 
-                            data-tally-src="https://tally.so/embed/m6BDko?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-                            loading="lazy" 
-                            width="100%" 
-                            height="500" 
-                            frameborder="0" 
-                            marginheight="0" 
-                            marginwidth="0" 
+                        <iframe
+                            data-tally-src="https://tally.so/embed/m6BDko?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                            loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"
                             title="VoicyCareお問い合わせフォーム">
                         </iframe>
                         <script>
-                            var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.head.appendChild(s);}
+                            var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.head.appendChild(s); }
                         </script>
                     </div>
                 </div>
@@ -574,8 +659,12 @@
                         <h4>サポート</h4>
                         <ul>
                             <li><a href="#contact">お問い合わせ</a></li>
-                            <li><a href="https://github.com/n-imai/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                            <li><a href="#" onclick="window.VC_openCookieSettings && window.VC_openCookieSettings(); return false;">Cookie設定</a></li>
+                            <li><a href="/articles/">お役立ち記事</a></li>
+                            <li><a href="https://github.com/n-imai/" target="_blank"
+                                    rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="#"
+                                    onclick="window.VC_openCookieSettings && window.VC_openCookieSettings(); return false;">Cookie設定</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -588,4 +677,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
