@@ -254,6 +254,55 @@ document.addEventListener('DOMContentLoaded', function() {
         VC_createConsentBanner();
     };
 
+    // 音波ビジュアライザー（Canvas API版・中程度）
+    const canvas = document.getElementById('sound-wave-canvas');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = 200;
+
+        let waveOffset = 0;
+        const waves = [
+            { amplitude: 30, frequency: 0.02, speed: 0.03, color: 'rgba(255, 107, 107, 0.3)' },
+            { amplitude: 25, frequency: 0.025, speed: 0.025, color: 'rgba(78, 205, 196, 0.3)' },
+            { amplitude: 20, frequency: 0.03, speed: 0.02, color: 'rgba(255, 230, 109, 0.3)' }
+        ];
+
+        function drawWave(offset, wave) {
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height);
+
+            for (let x = 0; x < canvas.width; x++) {
+                const y = canvas.height / 2 +
+                         Math.sin(x * wave.frequency + offset) * wave.amplitude;
+                ctx.lineTo(x, y);
+            }
+
+            ctx.lineTo(canvas.width, canvas.height);
+            ctx.closePath();
+            ctx.fillStyle = wave.color;
+            ctx.fill();
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            waves.forEach((wave, index) => {
+                drawWave(waveOffset * wave.speed + index, wave);
+            });
+
+            waveOffset += 1;
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // リサイズ対応
+        window.addEventListener('resize', debounce(() => {
+            canvas.width = window.innerWidth;
+            canvas.height = 200;
+        }, 250));
+    }
 
 });
 
