@@ -7,13 +7,15 @@
 
 /* 基本設定 */
 :root {
-    /* Modern Vibrant Palette */
-    --primary-color: #3B82F6;
-    /* Bright Blue */
-    --secondary-color: #10B981;
-    /* Emerald Green */
-    --accent-color: #F59E0B;
-    /* Amber */
+    /* Warm & Friendly Palette for Hearing Support */
+    --primary-color: #FF6B6B;
+    /* Coral - 温かみのあるコーラル */
+    --secondary-color: #4ECDC4;
+    /* Teal - 落ち着いたティール */
+    --accent-color: #FFE66D;
+    /* Gold - 明るいゴールド */
+    --trust-color: #2D3561;
+    /* Navy - 深い紺（新規追加） */
 
     /* Text Colors */
     --text-dark: #1F2937;
@@ -31,24 +33,25 @@
     /* Shadows & Glows */
     --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.5);
+    --shadow-glow: 0 0 20px rgba(255, 107, 107, 0.5);
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
-    /* Blue to Cyan */
-    --gradient-secondary: linear-gradient(135deg, #10B981 0%, #34D399 100%);
-    /* Emerald */
-    --gradient-text: linear-gradient(135deg, #1E40AF 0%, #06B6D4 100%);
+    --gradient-primary: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+    /* Coral to Teal */
+    --gradient-secondary: linear-gradient(135deg, #4ECDC4 0%, #FFE66D 100%);
+    /* Teal to Gold */
+    --gradient-text: linear-gradient(135deg, #FF6B6B 0%, #2D3561 100%);
+    /* Coral to Navy */
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
     line-height: 1.7;
     color: var(--text-dark);
     background-color: var(--background-light);
     background-image:
-        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+        radial-gradient(at 0% 0%, rgba(255, 107, 107, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(78, 205, 196, 0.05) 0px, transparent 50%);
     background-attachment: fixed;
 }
 
@@ -113,6 +116,25 @@ body {
     color: var(--primary-color);
 }
 
+/* Focus Styles for Accessibility */
+.nav-menu a:focus,
+.btn:focus,
+button:focus,
+a:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.nav-menu a:focus-visible,
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 4px;
+    box-shadow: 0 0 0 6px rgba(255, 230, 109, 0.3);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -155,10 +177,21 @@ body {
     right: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 107, 107, 0.15) 0%, transparent 70%);
     border-radius: 50%;
     z-index: -1;
     filter: blur(60px);
+}
+
+.sound-wave-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero-container {
@@ -862,6 +895,106 @@ body {
 
 .tally-form-container iframe {
     border-radius: 10px;
+}
+
+/* パンくずリスト */
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    margin-top: 70px; /* headerの高さ分 */
+    backdrop-filter: blur(8px);
+}
+
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '›';
+    margin-left: 8px;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--trust-color);
+    text-decoration: underline;
+}
+
+.breadcrumb li:last-child span {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* 関連記事セクション */
+.related-articles {
+    background: var(--background-light);
+    padding: 60px 0;
+    margin-top: 60px;
+}
+
+.related-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.related-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.related-content {
+    padding: 20px;
+}
+
+.related-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.related-content p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
 /* フッター */

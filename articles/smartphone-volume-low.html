@@ -140,6 +140,24 @@
     </header>
 
     <main style="padding-top: 80px;">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/"><span itemprop="name">ホーム</span></a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/articles/"><span itemprop="name">記事一覧</span></a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">スマホの音が小さい時の対処法</span>
+                    <meta itemprop="position" content="3" />
+                </li>
+            </ol>
+        </nav>
+
         <article class="article-container">
             <header class="article-header">
                 <h1 class="article-title">スマホの音が小さい！聞こえにくい時の対処法5選</h1>
@@ -193,6 +211,44 @@
                 </p>
             </div>
         </article>
+
+        <!-- Related Articles Section -->
+        <section class="related-articles">
+            <div class="container">
+                <h2 class="section-title" style="font-size: 1.8rem;">関連記事</h2>
+                <div class="articles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <article class="related-card">
+                        <a href="/articles/volume-boost-app-free.html" style="text-decoration: none; color: inherit;">
+                            <div class="related-content" style="padding: 20px;">
+                                <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 10px;">音量増幅アプリ無料おすすめ5選【2025年最新】</h3>
+                                <p style="color: var(--text-light); margin-bottom: 15px;">無料で使える音量増幅アプリを厳選してご紹介。安全性や音質を考慮した選び方も解説します。</p>
+                                <span class="read-more" style="color: var(--secondary-color); font-weight: 600;">続きを読む →</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="related-card">
+                        <a href="/articles/earphone-volume-too-low.html" style="text-decoration: none; color: inherit;">
+                            <div class="related-content" style="padding: 20px;">
+                                <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 10px;">イヤホンの音量が最大でも小さい時の対処法</h3>
+                                <p style="color: var(--text-light); margin-bottom: 15px;">イヤホンの音量問題を原因別に解説。iPhone・Android別の具体的な対処法をご紹介します。</p>
+                                <span class="read-more" style="color: var(--secondary-color); font-weight: 600;">続きを読む →</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="related-card">
+                        <a href="/articles/hearing-aid-music-issue.html" style="text-decoration: none; color: inherit;">
+                            <div class="related-content" style="padding: 20px;">
+                                <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 10px;">補聴器で音楽が聞こえにくい時の解決法</h3>
+                                <p style="color: var(--text-light); margin-bottom: 15px;">補聴器を使っているのに音楽が聞こえにくい理由と解決方法を詳しく解説します。</p>
+                                <span class="read-more" style="color: var(--secondary-color); font-weight: 600;">続きを読む →</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- フッター -->

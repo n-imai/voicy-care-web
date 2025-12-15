@@ -9,7 +9,7 @@
         content="音量増幅アプリ - 最大200%の音量ブースト機能を搭載した音楽プレイヤー。イヤホン・ヘッドホンの音量を増幅し、聞こえにくい音楽やポッドキャストもクリアに再生。無料の音量ブースターアプリ。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://voicy-care.honeymarron.com/">
     <link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/">
@@ -90,6 +90,28 @@
             "Dropboxクラウド連携",
             "大きな文字とボタンのUI"
           ]
+        },
+        {
+          "@type": "Organization",
+          "name": "VoicyCare",
+          "url": "https://voicy-care.honeymarron.com/",
+          "logo": "https://voicy-care.honeymarron.com/assets/images/icons/app_store_icon.svg",
+          "description": "聴覚支援特化の音量増幅アプリ。最大200%の音量ブースト機能でより快適な音楽体験を。",
+          "foundingDate": "2025",
+          "founder": {
+            "@type": "Person",
+            "name": "honeymarron"
+          },
+          "sameAs": [
+            "https://github.com/n-imai/",
+            "https://apps.apple.com/jp/app/id6749561636"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "url": "https://voicy-care.honeymarron.com/contact",
+            "availableLanguage": ["Japanese", "English"]
+          }
         },
         {
           "@type": "ContactPage",
@@ -205,6 +227,7 @@
 
     <!-- メインビジュアル -->
     <section class="hero">
+        <canvas id="sound-wave-canvas" class="sound-wave-bg"></canvas>
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -282,6 +305,31 @@
                         iOS版をリリースしました
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お役立ち記事 -->
+    <section id="articles" class="features">
+        <div class="container">
+            <h2 class="section-title">お役立ち記事</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 3rem; font-size: 1.1rem;">
+                音量増幅や聴覚支援に関する情報をお届けします
+            </p>
+            <div class="features-grid">
+                <!-- 記事1: スマホの音が小さい -->
+                <article class="feature-card">
+                    <a href="/articles/smartphone-volume-low.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-icon">📱</div>
+                        <h3 class="feature-title">スマホの音が小さい！対処法5選</h3>
+                        <p class="feature-description">
+                            スマホの音が小さくて聞こえにくい時の対処法を解説します。設定確認から便利なアプリまで、すぐに試せる方法をご紹介。
+                        </p>
+                    </a>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="/articles/" class="btn btn-secondary">記事一覧を見る</a>
             </div>
         </div>
     </section>
@@ -473,12 +521,12 @@
                 <div class="tech-card">
                     <h3 class="tech-title">🛠️ 技術スタック</h3>
                     <ul class="tech-list">
-                        <li><strong>Framework:</strong> Flutter 3.16+</li>
-                        <li><strong>Language:</strong> Dart 3.2+</li>
-                        <li><strong>Audio:</strong> just_audio + just_audio_background + audioplayers</li>
+                        <li><strong>Framework:</strong> Flutter</li>
+                        <li><strong>Language:</strong> Dart</li>
                         <li><strong>Architecture:</strong> Clean Architecture</li>
                         <li><strong>State Management:</strong> BLoC Pattern</li>
-                        <li><strong>Ads/Consent:</strong> Google Mobile Ads SDK + UMP</li>
+                        <li><strong>Audio Engine:</strong> just_audio</li>
+                        <li><strong>Ads:</strong> Google Mobile Ads SDK</li>
                     </ul>
                 </div>
 
@@ -548,7 +596,8 @@
                 <div class="contact-info">
                     <h3 class="contact-subtitle">開発者情報</h3>
                     <p class="contact-developer">
-                        <strong>honeymarron</strong> - 開発者
+                        <strong>honeymarron</strong> - 開発者<br>
+                        <a href="https://honeymarron.com/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">🌐 開発者サイト</a>
                     </p>
                     <p class="contact-description">
                         質問やバグ報告、ご要望がございましたら、下記のフォームをご利用ください。<br>
@@ -660,8 +709,8 @@
                         <ul>
                             <li><a href="#contact">お問い合わせ</a></li>
                             <li><a href="/articles/">お役立ち記事</a></li>
-                            <li><a href="https://github.com/n-imai/" target="_blank"
-                                    rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="https://honeymarron.com/" target="_blank"
+                                    rel="noopener noreferrer">開発者サイト</a></li>
                             <li><a href="#"
                                     onclick="window.VC_openCookieSettings && window.VC_openCookieSettings(); return false;">Cookie設定</a>
                             </li>
