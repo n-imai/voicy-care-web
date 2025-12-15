@@ -20,8 +20,22 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16.png">
     <link rel="shortcut icon" href="/favicon.ico">
-    <meta name="theme-color" content="#FF6B6B">
+    <meta name="theme-color" content="#0db4c1">
+    <meta name="robots" content="index,follow">
 
+    <!-- Consent Mode v2 default (denied) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'functionality_storage': 'granted',
+            'security_storage': 'granted'
+        });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FDNGSHFFN"></script>
     <script>
@@ -43,7 +57,6 @@
                     </a>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="/en/articles/">Articles</a></li>
                     <li><a href="/en/#download">Download</a></li>
                 </ul>
                 <div class="nav-toggle">
