@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://voicy-care.honeymarron.com/</loc>
-    <lastmod>2025-11-22</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/en/</loc>
-    <lastmod>2025-11-22</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/"/>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/articles/</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/"/>
@@ -83,7 +83,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/articles/smartphone-volume-low.html</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/smartphone-volume-low.html"/>
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/articles/volume-boost-app-free.html</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/volume-boost-app-free.html"/>
@@ -101,7 +101,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/articles/earphone-volume-too-low.html</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/earphone-volume-too-low.html"/>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/articles/hearing-aid-music-issue.html</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/hearing-aid-music-issue.html"/>
@@ -120,7 +120,7 @@
   <!-- English Articles -->
   <url>
     <loc>https://voicy-care.honeymarron.com/en/articles/</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/"/>
@@ -129,7 +129,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/en/articles/smartphone-volume-low.html</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/smartphone-volume-low.html"/>
@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/en/articles/volume-boost-app-free.html</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/volume-boost-app-free.html"/>
@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/en/articles/earphone-volume-too-low.html</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/earphone-volume-too-low.html"/>
@@ -156,7 +156,7 @@
   </url>
   <url>
     <loc>https://voicy-care.honeymarron.com/en/articles/hearing-aid-music-issue.html</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://voicy-care.honeymarron.com/articles/hearing-aid-music-issue.html"/>
