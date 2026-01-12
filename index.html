@@ -65,7 +65,7 @@
           "name": "VoicyCare - 音量増幅アプリ",
           "operatingSystem": "iOS, Android",
           "applicationCategory": "MusicApplication",
-          "softwareVersion": "1.0.0",
+          "softwareVersion": "1.3.0",
           "description": "音量増幅アプリ。最大200%の音量ブースト機能でイヤホン・ヘッドホンの音量を増幅。聞こえにくい音楽もクリアに再生する無料音楽プレイヤー。",
           "offers": {
             "@type": "Offer",
@@ -87,7 +87,7 @@
             "5バンドイコライザー",
             "音量プリセット機能",
             "ABリピート機能",
-            "Dropboxクラウド連携",
+            "Dropbox・Google Driveクラウド連携",
             "大きな文字とボタンのUI"
           ]
         },
@@ -297,6 +297,16 @@
             <div class="news-list" style="max-width: 800px; margin: 0 auto;">
                 <div class="news-item"
                     style="background: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 10px; display: flex; align-items: center; gap: 15px;">
+                    <time datetime="2026-01-10"
+                        style="color: #666; font-size: 0.9rem; min-width: 100px;">2026.01.10</time>
+                    <div class="news-content">
+                        <span class="news-tag"
+                            style="background: #0db4c1; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 10px;">Update</span>
+                        v1.3.0 リリース - Google Drive連携に対応しました
+                    </div>
+                </div>
+                <div class="news-item"
+                    style="background: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 10px; display: flex; align-items: center; gap: 15px;">
                     <time datetime="2025-11-22"
                         style="color: #666; font-size: 0.9rem; min-width: 100px;">2025.11.22</time>
                     <div class="news-content">
@@ -391,11 +401,11 @@
                     <div class="feature-icon">🎵</div>
                     <h3 class="feature-title">音量・音質プリセット</h3>
                     <p class="feature-description">
-                        3段階の音量プリセットと、シンプル/詳細を切り替えできる音質設定で、最適な聴こえを簡単に。
+                        5段階の音量プリセットと、シンプル/詳細を切り替えできる音質設定で、最適な聴こえを簡単に。
                         プリセット値を明記し、選びやすくしました。
                     </p>
                     <ul class="feature-list">
-                        <li>音量プリセット: 40% / 70% / 100%</li>
+                        <li>音量プリセット: 5段階 (静か / やや静か / 標準 / やや大きめ / 大きめ)</li>
                         <li>音質プリセット: やわらか(0.9倍) / 静か(0.7倍) / はっきり(1.2倍)</li>
                         <li>イコライザープリセット（クラシック/ボーカル/ロック/フラット）</li>
                     </ul>
@@ -405,10 +415,11 @@
                     <div class="feature-icon">☁️</div>
                     <h3 class="feature-title">マルチクラウド対応</h3>
                     <p class="feature-description">
-                        Dropbox完全対応により大容量ファイル（最大4GB）のストリーミング再生を実現。将来的に他のクラウドサービスにも対応予定。
+                        DropboxとGoogle Driveに対応。大容量ファイル（最大4GB）のストリーミング再生を実現。
                     </p>
                     <ul class="feature-list">
                         <li>Dropbox完全統合（自動トークンリフレッシュ対応）</li>
+                        <li>Google Drive連携対応（v1.3.0〜）</li>
                         <li>大容量ファイル（最大4GB）対応</li>
                         <li>バックグラウンドキャッシュ機能</li>
                     </ul>
@@ -573,7 +584,7 @@
                 <div class="tech-card">
                     <h3 class="tech-title">📱 対応プラットフォーム</h3>
                     <ul class="tech-list">
-                        <li><strong>iOS:</strong> 12.0以上</li>
+                        <li><strong>iOS:</strong> 15.0以上</li>
                         <li><strong>Android:</strong> API 21+ (5.0以上)</li>
                         <li><strong>メモリ:</strong> 4GB以上推奨</li>
                         <li><strong>ストレージ:</strong> 2GB以上の空き容量</li>
@@ -705,8 +716,8 @@
                     <p class="benefit-description">適切な音量でご利用ください。長時間の大音量は聴覚に影響する可能性があります。</p>
                 </div>
                 <div class="benefit-card">
-                    <h3 class="benefit-title">Dropboxなしでも使えますか？</h3>
-                    <p class="benefit-description">端末内の音楽再生は可能です。クラウド再生にはDropbox連携が必要です。</p>
+                    <h3 class="benefit-title">クラウド連携なしでも使えますか？</h3>
+                    <p class="benefit-description">端末内の音楽再生は可能です。クラウド再生にはDropboxまたはGoogle Drive連携が必要です。</p>
                 </div>
                 <div class="benefit-card">
                     <h3 class="benefit-title">対応ファイル形式は？</h3>
@@ -760,7 +771,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 honeymarron. All rights reserved.</p>
+                <p>&copy; 2026 honeymarron. All rights reserved.</p>
             </div>
         </div>
     </footer>
