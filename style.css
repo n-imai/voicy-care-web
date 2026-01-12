@@ -93,7 +93,8 @@ body {
     height: 70px;
 }
 
-.nav-logo h1 {
+.nav-logo h1,
+.nav-logo-text {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
