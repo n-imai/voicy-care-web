@@ -39,6 +39,75 @@
     <meta name="twitter:image" content="https://voicy-care.honeymarron.com/assets/images/og/voicycare-og.png">
     <meta name="twitter:image:alt" content="VoicyCare記事一覧のOG画像">
 
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://voicy-care.honeymarron.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "記事一覧",
+          "item": "https://voicy-care.honeymarron.com/articles/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: CollectionPage & ItemList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "お役立ち記事一覧",
+      "description": "VoicyCareの記事一覧。スマホやイヤホンの音量が小さい時の対処法、補聴器での音楽再生、無料音量増幅アプリの選び方など、聴覚支援に役立つ情報をお届けします。",
+      "url": "https://voicy-care.honeymarron.com/articles/",
+      "inLanguage": "ja-JP",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "VoicyCare",
+        "url": "https://voicy-care.honeymarron.com/"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://voicy-care.honeymarron.com/articles/hearing-aid-music-issue.html",
+            "name": "補聴器で音楽が聞こえにくい時の解決法【専門家が解説】"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://voicy-care.honeymarron.com/articles/earphone-volume-too-low.html",
+            "name": "イヤホンの音量が最大でも小さい時の対処法【2025年完全版】"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://voicy-care.honeymarron.com/articles/volume-boost-app-free.html",
+            "name": "音量増幅アプリ無料おすすめ5選【2025年最新】"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://voicy-care.honeymarron.com/articles/smartphone-volume-low.html",
+            "name": "スマホの音が小さい！聞こえにくい時の対処法5選"
+          }
+        ]
+      }
+    }
+    </script>
+
     <!-- Consent Mode v2 default (denied) -->
     <script>
         window.dataLayer = window.dataLayer || [];
