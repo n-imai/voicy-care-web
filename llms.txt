@@ -1,0 +1,36 @@
+# VoicyCare - 聴覚支援音楽プレイヤー
+
+> VoicyCareは、聞こえにくさを感じる方のための音量増幅音楽プレイヤーアプリです。最大200%の音量ブースト機能で、イヤホンやヘッドホンの音量を増幅し、音楽をよりクリアに楽しめます。
+
+## 主な機能
+
+- 最大200%の音量増幅（音量ブースト）
+- 5バンドイコライザー（クラシック・ボーカル・ロック等のプリセット）
+- 音量プリセット機能
+- ABリピート機能
+- Dropboxクラウド連携
+- 大きな文字とボタンのUI（シニア対応）
+
+## 対応プラットフォーム
+
+- iOS（iPhone / iPad）
+- 無料
+
+## リンク
+
+- 公式サイト: https://voicy-care.honeymarron.com/
+- App Store: https://apps.apple.com/jp/app/id6749561636
+- お問い合わせ: https://voicy-care.honeymarron.com/contact
+- プライバシーポリシー: https://voicy-care.honeymarron.com/privacy-policy
+- 利用規約: https://voicy-care.honeymarron.com/terms-of-service
+
+## 記事
+
+- [スマホの音が小さい！聞こえにくい時の対処法5選](https://voicy-care.honeymarron.com/articles/smartphone-volume-low)
+- [イヤホンの音量が最大でも小さい時の対処法【2025年完全版】](https://voicy-care.honeymarron.com/articles/earphone-volume-too-low)
+- [補聴器で音楽が聞こえにくい時の解決法【専門家が解説】](https://voicy-care.honeymarron.com/articles/hearing-aid-music-issue)
+- [音量増幅アプリ無料おすすめ5選【2025年最新】](https://voicy-care.honeymarron.com/articles/volume-boost-app-free)
+
+## 開発者
+
+honeymarron
