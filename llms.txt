@@ -1,6 +1,6 @@
-# VoicyCare - 聴覚支援音楽プレイヤー
+# VoicyCare
 
-> VoicyCareは、聞こえにくさを感じる方のための音量増幅音楽プレイヤーアプリです。最大200%の音量ブースト機能で、イヤホンやヘッドホンの音量を増幅し、音楽をよりクリアに楽しめます。
+> VoicyCareは、聞こえにくさを感じる方のための音量増幅音楽プレイヤーアプリです。最大200%の音量ブースト機能で、イヤホンやヘッドホンの音量を増幅し、音楽をよりクリアに楽しめます。iOS対応、無料。
 
 ## 主な機能
 
@@ -11,26 +11,20 @@
 - Dropboxクラウド連携
 - 大きな文字とボタンのUI（シニア対応）
 
-## 対応プラットフォーム
-
-- iOS（iPhone / iPad）
-- 無料
-
-## リンク
-
-- 公式サイト: https://voicy-care.honeymarron.com/
-- App Store: https://apps.apple.com/jp/app/id6749561636
-- お問い合わせ: https://voicy-care.honeymarron.com/contact
-- プライバシーポリシー: https://voicy-care.honeymarron.com/privacy-policy
-- 利用規約: https://voicy-care.honeymarron.com/terms-of-service
-
 ## 記事
 
-- [スマホの音が小さい！聞こえにくい時の対処法5選](https://voicy-care.honeymarron.com/articles/smartphone-volume-low)
-- [イヤホンの音量が最大でも小さい時の対処法【2025年完全版】](https://voicy-care.honeymarron.com/articles/earphone-volume-too-low)
-- [補聴器で音楽が聞こえにくい時の解決法【専門家が解説】](https://voicy-care.honeymarron.com/articles/hearing-aid-music-issue)
-- [音量増幅アプリ無料おすすめ5選【2025年最新】](https://voicy-care.honeymarron.com/articles/volume-boost-app-free)
+- [スマホの音が小さい！聞こえにくい時の対処法5選](https://voicy-care.honeymarron.com/articles/smartphone-volume-low): スマホの音量が小さい時の設定確認から音量増幅アプリまで
+- [イヤホンの音量が最大でも小さい時の対処法](https://voicy-care.honeymarron.com/articles/earphone-volume-too-low): iPhone・Android別の設定方法と解決策
+- [補聴器で音楽が聞こえにくい時の解決法](https://voicy-care.honeymarron.com/articles/hearing-aid-music-issue): 補聴器特有の問題と音楽を楽しむための対策
+- [音量増幅アプリ無料おすすめ5選](https://voicy-care.honeymarron.com/articles/volume-boost-app-free): 安全性と音質を考慮したアプリ選び
 
-## 開発者
+## ダウンロード
 
-honeymarron
+- [App Store](https://apps.apple.com/jp/app/id6749561636): iOS版を無料ダウンロード
+
+## Optional
+
+- [公式サイト](https://voicy-care.honeymarron.com/): VoicyCareの詳細情報
+- [お問い合わせ](https://voicy-care.honeymarron.com/contact): 不具合報告・機能要望
+- [プライバシーポリシー](https://voicy-care.honeymarron.com/privacy-policy)
+- [利用規約](https://voicy-care.honeymarron.com/terms-of-service)
