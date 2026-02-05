@@ -7,6 +7,3 @@ Allow: /
 # Sitemap
 Sitemap: https://voicy-care.honeymarron.com/sitemap.xml
 
-# LLMs
-LLMs-Txt: https://voicy-care.honeymarron.com/llms.txt
-
